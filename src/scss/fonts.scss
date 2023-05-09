@@ -1,28 +1,28 @@
 @font-face{
-	font-family: Roboto;
+	font-family: 'Pangram';
 	font-display: swap;
-	src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff");
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face{
-	font-family: Roboto;
-	font-display: swap;
-	src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face{
-	font-family: Roboto;
-	font-display: swap;
-	src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+	src: url("../fonts/Pangram-Regular.woff2") format("woff2"), url("../fonts/Pangram-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face{
-	font-family: Pixel;
+	font-family: 'Pangram';
 	font-display: swap;
-	src: url("../fonts/PixelDigivolve-Regular.woff2") format("woff2"), url("../fonts/PixelDigivolve-Regular.woff") format("woff");
+	src: url("../fonts/Pangram-Medium.woff2") format("woff2"), url("../fonts/Pangram-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Kudryashev';
+	font-display: swap;
+	src: url("../fonts/KudryashevHeadline-Regular.woff2") format("woff2"), url("../fonts/KudryashevHeadline-Regular.woff") format("woff");
 	font-weight: 400;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Kudryashev';
+	font-display: swap;
+	src: url("../fonts/KudryashevHeadline-Sans.woff2") format("woff2"), url("../fonts/KudryashevHeadline-Sans.woff") format("woff");
+	font-weight: 500;
 	font-style: normal;
 }

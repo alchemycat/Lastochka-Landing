@@ -1,0 +1,32 @@
+.burger {
+    position: relative;
+    width: 26px;
+    height: 8px;
+    cursor: pointer;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: var(--main-color);
+        border-radius: 20px;
+    }
+    &::before {
+        top: 0px;
+        left: 0px;
+    }
+    &::after {
+        bottom: 0px;
+        left: 0px;
+    }
+    &.active {
+        &::before {
+            transform: rotate(45deg);
+            top: 3px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 3px;
+        }
+    }
+}

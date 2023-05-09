@@ -1,0 +1,16 @@
+.header {
+    background-color: var(--bg-color);
+    padding-top: 36px;
+    padding-bottom: 41px;
+}
+
+@media (max-width: 1199px) {
+    .header {
+        &__contacts {
+            gap: 15px;
+        }
+        &__list {
+            gap: 15px;
+        }
+    }
+}

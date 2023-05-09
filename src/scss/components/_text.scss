@@ -1,0 +1,45 @@
+.text {
+    &__h1 {
+        font-family: 'Kudryashev';
+        font-weight: 500;
+        font-size: 67px;
+        line-height: 120%;
+        color: var(--main-color);
+    }
+    &__h2 {
+        font-family: 'Kudryashev';
+        font-weight: 500;
+        font-size: 51px;
+        line-height: 120%;
+        color: var(--main-color);
+    }
+    &__h3 {
+        font-family: 'Kudryashev';
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 110%;
+        color: var(--main-color);
+    }
+    &__caption {
+        font-family: 'Kudryashev';
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 120%;
+        color: var(--main-color);
+    }
+    &__regular {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 155%;
+        color: var(--main-color);
+        &-grey {
+            color: var(--grey-color);
+        }
+    }
+    &__medium {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 120%;
+        color: var(--main-color);
+    }
+}

@@ -1,0 +1,36 @@
+.nav {
+    &__list {
+        display: flex;
+        gap: 20px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: var(--main-color);
+        transition: color .3s ease;
+        &:hover {
+            color: var(--second-color);
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .nav {
+        &__list {
+            gap: 10px;
+        }
+        &__link {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .nav {
+        &__list {
+            margin-top: 28px;
+            flex-direction: column;
+        }
+    }
+}
