@@ -1,0 +1,24 @@
+.work {
+    padding-top: 120px;
+    &__header {
+        gap: 20px 0px;
+    }
+    &__subtitle {
+        text-align: right;
+    }
+    &__cards {
+        margin-top: 48px;
+        gap: 20px 0px;
+    }
+}
+
+@media (max-width: 575px) {
+    .work {
+        &__title {
+            max-width: 400px;
+        }
+        &__cards {
+            margin-top: 28px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.card {
+    padding: 16px 21px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px 0px;
+    min-height: 314px;
+    &__mark {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        padding-top: 5px;
+        border-radius: 18px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--second-color);
+        span {
+            color: #fff;
+            font-weight: 500;
+            font-size: 51px;
+            line-height: 38px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .work {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 575px) {
+    .card {
+        padding: 18px;
+        min-height: 246px;
+        &__mark {
+            width: 48px;
+            height: 48px;
+            span {
+                font-size: 28px;
+                line-height: 120%;
+            }
+        }
+    }
+}

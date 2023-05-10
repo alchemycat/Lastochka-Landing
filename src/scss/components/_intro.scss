@@ -33,12 +33,7 @@
         position: relative;
         z-index: 2;
     }
-    &__text {
-        font-family: "Kudryashev";
-        font-weight: 500;
-        font-size: 67px;
-        text-transform: uppercase;
-    }
+
     &__description {
         max-width: 285px;
         margin-top: 28px;
@@ -55,9 +50,7 @@
         &__title {
             font-size: 55px;
         }
-        &__text {
-            font-size: 55px;
-        }
+
         &__image {
             bottom: -50px;
             width: 345px;
@@ -74,21 +67,18 @@
             right: -100px;
             height: 390px;
         }
-        &__text {
-            font-size: 46px;
-        }
+
     }
 }
 
 @media (max-width: 767px) {
     .intro {
+        border-radius: 0px 0px 30px 30px;
         &__title {
             position: relative;
             z-index: 2;
         }
-        &__text {
-            font-size: 40px;
-        }
+
         &__image {
             width: 257px;
             height: 340px;
@@ -119,9 +109,7 @@
             right: -150px;
             bottom: -132px;
         }
-        &__text {
-            font-size: 36px;
-        }
+
         &__button {
             position: relative;
             z-index: 2;
