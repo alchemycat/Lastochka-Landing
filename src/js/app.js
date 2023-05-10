@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import burgerMenu from "./modules/burger.js";
 import slider from "./modules/slider.js";
+import calc from "./modules/calc.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
@@ -8,4 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	burgerMenu();
 
 	slider(); 
+
+	calc();
 });
