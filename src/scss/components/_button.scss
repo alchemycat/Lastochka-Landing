@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    padding: 14px 31px;
+    background-color: var(--second-color);
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 140px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--main-color);
+    }
+}
+
+@media (max-width: 575px) {
+    .button {
+        padding: 12px 31px;
+    }
+}

@@ -1,0 +1,134 @@
+.intro {
+    background-color: var(--bg-color);
+    padding-bottom: 99px;
+    border-radius: 0px 0px 60px 60px;
+    overflow: hidden;
+    padding-top: 40px;
+    &__wrapper {
+        position: relative;
+        &:before {
+            content: "";
+            width: 171px;
+            height: 148px;
+            background-image: url("../../img/intro/bg-item.png");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            z-index: 2;
+        }
+    }
+    &__image {
+        position: absolute;
+        right: 30px;
+        bottom: -100px;
+        width: 391px;
+        height: 520px;
+        background-image: url("../img/intro/woman.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__title {
+        max-width: 712px;
+        position: relative;
+        z-index: 2;
+    }
+    &__text {
+        font-family: "Kudryashev";
+        font-weight: 500;
+        font-size: 67px;
+        text-transform: uppercase;
+    }
+    &__description {
+        max-width: 285px;
+        margin-top: 28px;
+    }
+    &__button {
+        margin-top: 42px;
+        max-width: 204px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .intro {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 55px;
+        }
+        &__text {
+            font-size: 55px;
+        }
+        &__image {
+            bottom: -50px;
+            width: 345px;
+            right: 0px;
+            height: 420px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .intro {
+        padding-top: 151px;
+        &__image {
+            right: -100px;
+            height: 390px;
+        }
+        &__text {
+            font-size: 46px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+        &__title {
+            position: relative;
+            z-index: 2;
+        }
+        &__text {
+            font-size: 40px;
+        }
+        &__image {
+            width: 257px;
+            height: 340px;
+            right: -150px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .intro {
+        padding-top: 168px;
+        padding-bottom: 132px;
+        border-radius: 0px 0px 30px 30px;
+        &__wrapper {
+            &:before {
+                width: 143px;
+                height: 124px;
+                background-size: cover;
+                left: -30px;
+            }
+        }
+        &__description {
+            margin-top: 24px;
+        }
+        &__image {
+            width: 257px;
+            height: 340px;
+            right: -150px;
+            bottom: -132px;
+        }
+        &__text {
+            font-size: 36px;
+        }
+        &__button {
+            position: relative;
+            z-index: 2;
+            max-width: 320px;
+            font-size: 14px;
+            line-height: 145%;
+            margin-top: 48px;
+        }
+    }
+}

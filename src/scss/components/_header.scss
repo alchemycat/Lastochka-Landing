@@ -2,6 +2,27 @@
     background-color: var(--bg-color);
     padding-top: 36px;
     padding-bottom: 41px;
+    z-index: 10;
+    transition: all .3s ease;
+ 
+    &.active {
+        border-radius: 0px 0px 20px 20px;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        &.active {
+            padding-bottom: 50px;
+        }
+    }
+    &__contacts {
+        transition: all .3s ease;
+        &.active {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -12,5 +33,19 @@
         &__list {
             gap: 15px;
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
