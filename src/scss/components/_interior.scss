@@ -1,6 +1,9 @@
 .interior {
     padding-top: 120px;
     &__counter {
+        position: absolute;
+        top: -95px;
+        right: 0px;
         padding: 4px 18px;
         border-radius: 140px;
         border: 1px solid var(--second-color);
@@ -10,7 +13,7 @@
 
     &__slider {
         margin-top: 48px;
-        height: 394px;
+        position: relative;
     }
 
     .swiper {
@@ -18,8 +21,9 @@
         width: 100%;
         height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
         overflow: hidden;
+        border-radius: 20px;
     }
-    
+
     .swiper-slide {
       position: relative;
       width: var(--swiper-width);
@@ -27,50 +31,43 @@
       overflow: hidden;
       border-radius: 20px;
       margin-right: 20px;
-      &:after {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 100%;
-        right: 0px;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-        top: 0px;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 60.66%, rgba(255, 255, 255, 0) 100%);
-        opacity: 0;
-        transition: all .3s ease;
-      }
-      &:before {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 60.66%, rgba(255, 255, 255, 0) 100%);
-        opacity: 0;
-        transition: all .3s ease;
-    }
+        &:after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            right: 0px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            top: 0px;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 60.66%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 60.66%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+            transition: all .3s ease;
+        }
     }
 
     .swiper-slide-prev {
+        border-radius: 20px;
         &:after {
             opacity: 1;
           }
     }
 
     .swiper-slide-next {
+        border-radius: 20px;
         &:before {
             opacity: 1;
         }
-    }
-        
-    .swiper-slide.swiper-slide-active {  
-      transform: scale(1) !important;
-      opacity: 1 !important;
-    }
-    
-    .swiper-backface-hidden .swiper-slide.swiper-slide-active {
-      transform: scale(1) translateZ(0) !important;
     }
     
     .swiper-image {
@@ -88,31 +85,108 @@
       height: 100%;
       background-color: #929ec9;
     }
-    
-    .swiper-button-next,
-    .swiper-button-prev {
-      padding: 8px;
-      width: 12px;
-      height: 12px;
-      margin-top: 0;
-      background-color: rgba(0, 0, 0, .4);
-      border-radius: 50%;
-    }
-    
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      color: #fff;
-      font-size: 12px;
-    }
-    
-    .swiper-button-next {
-      transform: translate(50%, -50%);
-      right: calc((100% - var(--swiper-width)) / 2);
-    }
-    
-    .swiper-button-prev {
-      transform: translate(-50%, -50%);
-      left: calc((100% - var(--swiper-width)) / 2);
+
+    .swiper-arrow {
+        position: absolute;
+        border-radius: 140px;
+        border: 1px solid var(--main-color);
+        padding: 8px 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        transition: all .2s ease;
+        svg {
+            path {
+                transition: all .2s ease;
+            }
+        }
+        &:hover {
+            border-color: var(--second-color);
+            svg {
+                path {
+                    fill: var(--second-color);
+                }
+            }
+        }
+        &-prev {
+            left: 40px;
+        }
+        &-next {
+            right: 40px;
+        }
     }
 
+}
+
+@media (max-width: 1199px) {
+    .interior {
+        .swiper-slide {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .interior {
+        .swiper-slide {
+            width: 100%;
+            margin-right: 0px;
+            img {
+                width: 100%;
+            }
+        }
+        &__slider {
+            margin-top: 28px;
+        }
+        &__counter {
+            position: static;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper {
+            margin-top: 22px;
+        }
+        .swiper-navigation {
+            position: static;
+            // top: -68px;
+            display: flex;
+            gap: 0px 8px;
+        }
+        .swiper-arrow {
+            position: static;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .interior {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 575px) {
+    .interior {
+        &__header {
+            gap: 28px 0px;
+        }
+        &__title {
+            max-width: 320px;
+        }
+        .swiper-navigation {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .swiper-arrow {
+            position: static;
+            transform: translateX(0);
+            padding: 4px 16px;
+            svg {
+                width: 19px;
+                height: 16px;
+            }
+        }
+    }
 }

@@ -5,7 +5,9 @@ import Swiper from 'swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
+	
 	burgerMenu();
+
 	const swiper = new Swiper('.swiper', {
 		loop: true,
 		slidesPerView: 'auto',
@@ -20,11 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	  function setSwiperCounter() {
 		counter.innerHTML = `${swiper.realIndex + 1}/${swiper.slides.length}`;
-
 	  }
 
 	  setSwiperCounter();
 
 	  swiper.on('slideChange', setSwiperCounter);
+	  
+	  const nextButton = document.querySelector('.swiper-arrow-next');
+	  const prevButton = document.querySelector('.swiper-arrow-prev');
+
+	  nextButton.addEventListener('click', nextSlide);
+	  prevButton.addEventListener('click', prevSlide);
+	  
+	  function nextSlide() {
+		swiper.slideNext();	
+	  }
+
+	  function prevSlide() {
+		swiper.slidePrev();
+	  }
 	  
 });
