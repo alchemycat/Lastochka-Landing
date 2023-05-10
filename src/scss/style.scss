@@ -8,6 +8,7 @@
     --second-color: #F57CCA;
     --grey-color: #82828E;
     --bg-color: #ECEEF7;
+    --bg-pink: #F6CBE8;
     --default-font-family: "Pangram";
 
     --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
@@ -116,5 +117,7 @@ body {
 @import "./components/advantages";
 @import "./components/targets";
 @import "./components/interior";
+@import "./components/video";
+@import "./components/calc";
 
 @import "./components/text";

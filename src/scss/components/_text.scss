@@ -49,6 +49,9 @@
         line-height: 155%;
         color: var(--main-color);
         word-wrap: break-word;
+        &-400 {
+            font-weight: 400;
+        }
         &-grey {
             color: var(--grey-color);
         }
