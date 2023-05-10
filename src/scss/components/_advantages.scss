@@ -1,0 +1,53 @@
+.advantages {
+    padding-top: 120px;
+    &__cards {
+        margin-top: 48px;
+        gap: 20px 0px;
+    }
+    &__card {
+        min-height: 272px;
+        gap: 0px;
+        &-image {
+            &-1 {
+                background-image: url("../../img/advantages/safe.svg");
+            }
+            &-2 {
+                background-image: url("../../img/advantages/heart.svg");
+            }
+            &-3 {
+                background-image: url("../../img/advantages/calendar.svg");
+            }
+            &-4 {
+                background-image: url("../../img/advantages/dollar.svg");
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        min-height: 272px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &-1 {
+            width: 223px;
+            background-image: url("../../img/advantages/first-woman.png");
+        }
+        &-2 {
+            width: 166px;
+            background-image: url("../../img/advantages/second-woman.png");
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        padding-top: 80px;
+        &__cards {
+            margin-top: 28px;
+        }
+        &__title {
+            span {
+                display: block;
+            }
+        }
+    }
+}

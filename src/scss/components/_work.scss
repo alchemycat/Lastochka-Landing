@@ -12,13 +12,21 @@
     }
 }
 
+@media (max-width: 767px) {
+    .work {
+        padding-top: 80px;
+        &__cards {
+            margin-top: 28px;
+        }
+    }
+
+}
+
+
 @media (max-width: 575px) {
     .work {
         &__title {
             max-width: 400px;
-        }
-        &__cards {
-            margin-top: 28px;
         }
     }
 }

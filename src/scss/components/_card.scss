@@ -6,7 +6,13 @@
     justify-content: space-between;
     gap: 20px 0px;
     min-height: 314px;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 22px 0px;
+    }
     &__mark {
+        position: relative;
         display: flex;
         width: 60px;
         height: 60px;
@@ -22,11 +28,15 @@
             line-height: 38px;
         }
     }
-}
-
-@media (max-width: 767px) {
-    .work {
-        padding-top: 80px;
+    &__image {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }
 
@@ -34,6 +44,9 @@
     .card {
         padding: 18px;
         min-height: 246px;
+        &__header {
+            gap: 12px 0px;
+        }
         &__mark {
             width: 48px;
             height: 48px;
@@ -41,6 +54,10 @@
                 font-size: 28px;
                 line-height: 120%;
             }
+        }
+        &__image {
+            width: 22px;
+            height: 22px;
         }
     }
 }
