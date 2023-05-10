@@ -1,6 +1,7 @@
 @import "./fonts";
 @import "./lib/bootstrap.min";
 @import "./lib/bootstrap-reboot.min";
+@import "./lib/swiper-bundle.min";
 
 :root {
     --main-color: #1A286F;
@@ -8,6 +9,15 @@
     --grey-color: #82828E;
     --bg-color: #ECEEF7;
     --default-font-family: "Pangram";
+
+    --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
+
+    --swiper-width: 50%;
+    --swiper-inactive-scale: .85; /* makes the other slide smaller */
+    
+    /* responsive settings */
+    --swiper-mobile-width: 90%;
+    --swiper-mobile-inactive-scale: .95;
 }
 
 body {
@@ -105,5 +115,6 @@ body {
 @import "./components/card";
 @import "./components/advantages";
 @import "./components/targets";
+@import "./components/interior";
 
 @import "./components/text";

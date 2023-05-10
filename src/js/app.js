@@ -1,42 +1,30 @@
 import * as flsFunctions from "./modules/functions.js";
+import burgerMenu from "./modules/burger.js";
+
+import Swiper from 'swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
+	burgerMenu();
+	const swiper = new Swiper('.swiper', {
+		loop: true,
+		slidesPerView: 'auto',
+		autoplay: {
+		  delay: 5000,
+		  disableOnInteraction: true
+		},
+		centeredSlides: true,
+	  });
+
+	  const counter = document.querySelector('.interior__counter');
+
+	  function setSwiperCounter() {
+		counter.innerHTML = `${swiper.realIndex + 1}/${swiper.slides.length}`;
+
+	  }
+
+	  setSwiperCounter();
+
+	  swiper.on('slideChange', setSwiperCounter);
+	  
 });
-
-function burgerMenu() {
-	const burger = document.querySelector(".burger");
-	const contacts = document.querySelector(".header__contacts");
-	const wrapper = document.querySelector(".header__wrapper");
-	const header = document.querySelector(".header");
-	const overlay = document.querySelector(".overlay");
-	const phone = document.querySelector(".contacts__phone");
-
-	burger.addEventListener("click", toggleBurger);
-
-	function toggleBurger() {
-		const attrValue = JSON.parse(burger.getAttribute("aria-expanded"));
-
-		if (attrValue) {
-			burger.classList.add("active");
-			contacts.classList.add("active");
-			wrapper.classList.add("active");
-			header.classList.add("active");
-			overlay.classList.add("active");
-
-			phone.classList.remove("contacts__phone-sm")
-		} else {
-			burger.classList.remove("active");
-			contacts.classList.remove("active");
-			wrapper.classList.remove("active");
-			header.classList.remove("active");
-			overlay.classList.remove("active");
-
-			phone.classList.add("contacts__phone-sm")
-		}
-	}
-
-	toggleBurger();
-}
-
-burgerMenu();
