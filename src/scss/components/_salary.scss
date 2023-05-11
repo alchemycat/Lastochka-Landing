@@ -1,0 +1,104 @@
+.salary {
+    padding-top: 120px;
+    &__wrapper {
+        position: relative;
+        padding: 48px;
+        border-radius: 20px; 
+        background-color: var(--bg-color);
+        overflow: hidden;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 261px;
+            bottom: 0px;
+            width: 191px;
+            height: 244px;
+            background-image: url("../../img/targets/bg-image.png");
+            background-repeat: no-repeat;
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+    }
+    &__description {
+        margin-top: 18px;
+    }
+    &__button {
+        margin-top: 23px;
+        max-width: 204px;
+    }
+    &__image {
+        position: absolute;
+        right: 0px;
+        bottom: -55px;
+        background-image: url("../../img/targets/woman.png");
+        background-repeat: no-repeat;
+        width: 225px;
+        height: 348px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .salary {
+        &__wrapper {
+            &:after {
+                width: 190px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .salary {
+        &__wrapper {
+            &:after {
+                display: none;
+            }
+        }
+        &__description {
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .salary {
+        padding-top: 80px;
+        &__wrapper {
+            padding: 28px;
+            padding-bottom: 295px;
+        }
+        &__image {
+            width: 225px;
+            height: 294px;
+            right: 50%;
+            bottom: -30px;
+            transform: translateX(50%);
+        }
+        &__button {
+            margin-top: 22px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .salary {
+        &__wrapper {
+            padding-bottom: 252px;
+        }
+        &__image {
+            width: 190px;
+            height: 294px;
+            right: 50%;
+            bottom: -65px;
+            transform: translateX(50%);
+            background-size: contain;
+        }
+        &__button {
+            max-width: 170px;
+            padding: 12px 24px;
+        }
+    }
+}
