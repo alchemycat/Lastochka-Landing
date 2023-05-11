@@ -127,6 +127,11 @@
         &__list {
             margin-top: 12px;
         }
+        &__item {
+            &.text__regular {
+                font-weight: 500;
+            }
+        }
         &__image {
             &-1 {
                 width: 153px;
@@ -142,8 +147,8 @@
         }
         &__button {
             margin-top: 22px;
-            padding: 12px 23px;
-            max-width: 170px;
+            padding: 12px 22px;
+            display: inline-block;
         }
     }
 }

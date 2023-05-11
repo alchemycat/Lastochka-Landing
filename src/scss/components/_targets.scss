@@ -92,8 +92,8 @@
             background-size: contain;
         }
         &__button {
-            max-width: 170px;
-            padding: 12px 24px;
+            display: inline-block;
+            padding: 12px 22px;
         }
     }
 }

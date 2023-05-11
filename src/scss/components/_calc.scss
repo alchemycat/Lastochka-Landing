@@ -137,12 +137,15 @@
                 font-size: 38px;
                 line-height: 120%;
                 position: absolute;
-                right: -13px;
+                right: -10px;
                 top: 10px;
             }
         }
         &__description {
             margin-top: 14px;
+            &.text__regular {
+                font-weight: 500;
+            }
         }
     }
 }

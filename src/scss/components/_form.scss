@@ -121,13 +121,18 @@
             font-size: 14px;
             line-height: 145%;
             padding: 12px 28px;
+            font-weight: 500;
         }
         &__button {
             margin-top: 22px;
+            padding: 12px 24px;
         }
         &__policy {
             margin-top: 12px;
             max-width: 259px;
+            &.text__sm {
+                font-weight: 500;
+            }
         }
     }
 }
