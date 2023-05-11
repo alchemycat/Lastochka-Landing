@@ -25,6 +25,7 @@
             font-size: 51px;
             line-height: 120%;
             text-transform: uppercase;
+            font-weight: 500;
         }
     }
     &__h3 {
@@ -130,10 +131,10 @@
 @media (max-width: 575px) {
     .text {
         &__h1 {
-            font-size: 36px;
+            font-size: 38px;
             line-height: 120%;
             .text__inner {
-                font-size: 36px;
+                font-size: 38px;
             }
         }
         &__h2 {

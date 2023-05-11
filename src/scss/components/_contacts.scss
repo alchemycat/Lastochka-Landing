@@ -41,19 +41,23 @@
 @media (max-width: 1199px) {
     .contacts {
         gap: 10px;
+
+        &__messanger {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
         &__phone {
             font-size: 15px;
         }
     }
 }
 
-@media (max-width: 575px) {
-    .logo {
-        max-width: 126px;
-    }
+@media (max-width: 767px) {
     .contacts {
         &__phone {
-            font-size: 14px;
             &-sm {
                 border: none;
                 padding: 0;
@@ -63,7 +67,7 @@
                 }
                 svg {
                     display: block;
-    
+        
                     path {
                         transition: fill .3s ease;
                     }
@@ -75,11 +79,19 @@
                 }
             }
         }
-        &__messanger {
-            svg {
-                width: 20px;
-                height: 20px;
-            }
+    }
+
+}
+
+@media (max-width: 575px) {
+    .logo {
+        max-width: 126px;
+    }
+    .contacts {
+        gap: 14px;
+        &__phone {
+            font-size: 14px;
+
         }
     }
 }
