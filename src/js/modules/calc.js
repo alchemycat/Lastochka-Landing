@@ -3,7 +3,7 @@ export default function calc() {
 		hoursWrap = document.querySelector("[data-id='hours']"),
 		summWrap = document.querySelector(".summ");
 
-	let currentDayValue = 6;
+	let currentDayValue = 4;
 	let currentHoursValue = 6000;
 
 	const activeDaysItem = daysWrap.querySelector(

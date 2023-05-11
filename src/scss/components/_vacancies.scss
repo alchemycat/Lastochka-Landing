@@ -1,0 +1,149 @@
+.vacancies {
+    padding-top: 120px;
+    &__wrapper {
+        margin-top: 48px;
+        gap: 20px 0px;
+    }
+    &__column {
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid #D8D8E3;
+        padding: 38px;
+        height: 100%;
+        overflow: hidden;
+        &-pink {
+            background-color: var(--bg-pink);
+            border: 1px solid var(--second-color);
+        }
+    }
+    &__caption {
+        position: relative;
+        z-index: 2;
+    }
+    &__list {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px 0px;
+        padding-left: 10px;
+        list-style-type: none;
+    }
+    &__item {
+        position: relative;
+        z-index: 2;
+    }
+    &__item:before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        background-color: var(--second-color);
+        border-radius: 50%;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }   
+    &__button {
+        position: relative;
+        z-index: 2;
+        max-width: 204px;
+        margin-top: 18px;
+    }
+    &__image {
+        position: absolute;
+        bottom: 19px;
+        right: 27px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 216px;
+        height: 359px;
+        &-1 {
+            background-image: url("../../img/vacancies/woman-1.png");
+            bottom: 19px;
+            right: 27px;
+        }
+        &-2 {
+            background-image: url("../../img/vacancies/woman-2.png");
+            bottom: 19px;
+            right: 35px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .vacancies {
+        &__image {
+            &-1 {
+                right: -50px;
+            }
+            &-2 {
+                right: -60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .vacancies {
+        &__column {
+            min-height: 392px;
+        }
+        &__image {
+            &-1 {
+                right: 27px;
+            }
+            &-2 {
+                right: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .vacancies {
+        padding-top: 80px;
+        &__wrapper {
+            margin-top: 28px;
+        }
+        &__image {
+            &-1 {
+                right: -50px;
+                bottom: 0px;
+            }
+            &-2 {
+                right: -60px;
+                bottom: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .vacancies {
+        &__column {
+            padding: 28px;
+            min-height: auto;
+        }
+        &__list {
+            margin-top: 12px;
+        }
+        &__image {
+            &-1 {
+                width: 153px;
+                height: 255px;
+                right: -40px;
+            }
+            &-2 {
+                width: 204px;
+                height: 325px;
+                right: -75px;
+                background-image: url("../../img/vacancies/woman-2-inverted.png");
+            }
+        }
+        &__button {
+            margin-top: 22px;
+            padding: 12px 23px;
+            max-width: 170px;
+        }
+    }
+}

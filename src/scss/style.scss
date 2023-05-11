@@ -58,7 +58,6 @@ body {
   ul, li {
     padding: 0;
     margin: 0;
-    list-style-type: none;
   }
   
   input::-moz-placeholder {
@@ -119,5 +118,6 @@ body {
 @import "./components/interior";
 @import "./components/video";
 @import "./components/calc";
+@import "./components/vacancies";
 
 @import "./components/text";
