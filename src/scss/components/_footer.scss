@@ -56,7 +56,7 @@
         &__description {
             position: absolute;
             bottom: 28px;
-            max-width: 349px;
+            max-width: 320px;
         }
         &__contacts {
             margin-top: 49px;
@@ -96,6 +96,9 @@
                 background-color: var(--second-color);
                 color: white;
             }
+        }
+        &__address {
+            max-width: 145px;
         }
         .contacts__phone {
             padding: 4px 16px;

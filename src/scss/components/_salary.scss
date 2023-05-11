@@ -6,6 +6,7 @@
         border-radius: 20px; 
         background-color: var(--bg-color);
         overflow: hidden;
+        margin: 0 0;
         &:after {
             content: "";
             position: absolute;
