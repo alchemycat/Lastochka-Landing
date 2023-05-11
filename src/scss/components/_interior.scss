@@ -146,13 +146,19 @@
         }
         .swiper-navigation {
             position: static;
-            // top: -68px;
             display: flex;
             gap: 0px 8px;
         }
         .swiper-arrow {
             position: static;
             transform: translateY(0);
+            border: 1px solid #D8D8E3;
+            svg {
+                path {
+                    fill: #D8D8E3;
+                }
+
+            }
         }
     }
 }
@@ -177,12 +183,12 @@
         .swiper-navigation {
             position: absolute;
             top: 0px;
-            right: 0px;
+            right: 15px;
         }
         .swiper-arrow {
             position: static;
             transform: translateX(0);
-            padding: 4px 16px;
+            padding: 1px 16px;
             svg {
                 width: 19px;
                 height: 16px;

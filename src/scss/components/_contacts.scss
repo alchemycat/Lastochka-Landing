@@ -10,9 +10,10 @@
         padding: 4px 18px;
         border: 1px solid var(--main-color);
         border-radius: 140px;
-        transition: color .3s ease;
+        transition: all .3s ease;
         &:hover {
             color: var(--second-color);
+            border: 1px solid var(--second-color);
         }
         svg {
             display: none;

@@ -58,6 +58,9 @@
             bottom: 28px;
             max-width: 349px;
         }
+        &__contacts {
+            margin-top: 49px;
+        }
     }
 }
 
@@ -72,7 +75,7 @@
 
 @media (max-width: 575px) {
     .footer {
-        padding: 28px 20px;
+        padding: 28px 0px;
         padding-bottom: 146px;
         .logo {
             max-width: 150px;
