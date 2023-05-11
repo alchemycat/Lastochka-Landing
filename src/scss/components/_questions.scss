@@ -51,12 +51,15 @@
             position: absolute;
             right: 0px;
             top: 50%;
+            transition: all .3s ease;
+
         }
         &:after {
             width: 18px;
             height: 2px;
             background-color: #D8D8E3;
             border-radius: 140px;
+
         }
         &:before {
             width: 18px;
@@ -66,7 +69,6 @@
             border-radius: 140px;
         }
         &.active {
-            color: var(--second-color);
             &:after, &:before {
                 background-color: var(--second-color);
             }
@@ -80,6 +82,10 @@
     }
     &__caption {
         width: 93%;
+        transition: all .3s ease;
+        &.active {
+            color: var(--second-color);
+        }
     }
 }
 
