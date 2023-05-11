@@ -1,5 +1,6 @@
 .questions {
     padding-top: 120px;
+    padding-bottom: 120px;
     &__wrapper {
         margin-top: 48px;
     }
@@ -111,6 +112,7 @@
 @media (max-width: 767px) {
     .questions {
         padding-top: 80px;
+        padding-bottom: 80px;
         &__wrapper {
             margin-top: 28px;
         }

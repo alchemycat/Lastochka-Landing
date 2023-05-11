@@ -1,0 +1,8 @@
+.footer {
+    padding: 38px 0px;
+    border-radius: 40px 40px 0px 0px;
+    background-color: var(--bg-color);
+    &__button {
+        display: inline-block;
+    }
+}
