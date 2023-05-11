@@ -1,0 +1,120 @@
+.form {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        .text__inner {
+            display: block;
+        }
+    }
+    &__content {
+        border-radius: 20px;
+        background-color: var(--bg-color);
+        padding: 58px 0px;
+    }
+    &__wrapper {
+        margin-top: 48px;
+    }
+    &__block {
+        border-radius: 20px;
+        padding: 38px 102px;
+        background-color: #fff;
+        border: 1px solid #D8D8E3;
+    }
+    &__input {
+        padding: 13px 24px;
+        border-radius: 120px;
+        border: 1px solid #D8D8E3;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+
+        color: var(--grey-color);
+    }
+    &__file-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px 0px;
+    }
+    &__top {
+        gap: 18px 0px;
+    }
+    &__button {
+        margin-top: 38px;
+        border: none;
+        padding: 14px 51px;
+    }
+    &__file {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: var(--main-color);
+        padding: 13px 28px;
+        border: 1px solid #D8D8E3;
+        border-radius: 140px;
+        display: inline-block;
+        width: fit-content;
+    }
+    &__policy {
+        margin-top: 25px;
+        max-width: 369px;
+        a {
+            text-decoration: underline;
+            display: inline;
+            color: var(--second-color);
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .form {
+        &__block {
+            padding: 38px 70px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .form {
+        padding-top: 80px;
+        &__block {
+            padding: 38px 30px;
+        }
+        &__wrapper {
+            margin-top: 28px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .form {
+        &__bg {
+            border-radius: 20px;
+            background-color: var(--bg-color);
+        }
+        &__top {
+            gap: 12px 0px;
+        }
+        &__block {
+            padding: 28px 22px;
+        }
+        &__input {
+            padding: 11px 18px;
+        }
+        &__file {
+            font-size: 14px;
+            line-height: 145%;
+            padding: 12px 28px;
+        }
+        &__button {
+            margin-top: 22px;
+        }
+        &__policy {
+            margin-top: 12px;
+            max-width: 259px;
+        }
+    }
+}

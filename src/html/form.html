@@ -1,0 +1,74 @@
+<section class="form">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-11 form__bg">
+				<div class="form__content">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-8 col-xxl-6">
+							<h2 class="form__title text__h2">
+								<span class="secondary-color text__inner">ЗАПОЛНИ АНКЕТУ</span>
+								и мы с тобой свяжемся
+							</h2>
+						</div>
+					</div>
+					<div class="row form__wrapper justify-content-center">
+						<div class="col-12 col-sm-10 col-lg-8">
+							<div class="form__block">
+								<form method="post" action="#">
+									<fieldset>
+										<div class="form__top d-flex flex-column">
+											<input
+												class="form__input"
+												placeholder="Твоё имя"
+												type="text"
+												name="your-name"
+											/>
+											<input
+												class="form__input form__input-num"
+												placeholder="Твой возраст от 18 лет"
+												type="number"
+												name="age"
+											/>
+											<input
+												class="form__input"
+												placeholder="Телефон, телеграм или ссылка"
+												type="text"
+												name="phone"
+											/>
+
+											<div class="form__file-wrapper">
+                                                <p class="text__regular text__regular-400">Приложи фото или файл</p>
+												<label class="form__file" for="photo"
+													>Выбрать файл</label
+												>
+												<input
+													class="d-none"
+													id="photo"
+													accept="audio/*,video/*,image/*"
+													aria-invalid="false"
+													type="file"
+													name="photo"
+												/>
+											</div>
+										</div>
+										<input
+											class="form__button button"
+											type="submit"
+											value="Отправить"
+										/>
+										<p class="form__policy text__sm">
+											Нажимая кнопку «Отправить», вы соглашаетесь с нашей 
+											<a href="/about/privacy-policy/" rel="nofollow"
+												>Политикой в отношении обработки персональных данных</a
+											>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

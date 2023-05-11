@@ -59,6 +59,12 @@
             color: var(--second-color);
         }
     }
+    &__sm {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 135%;
+        color: var(--main-color);
+    }
     &__medium {
         font-weight: 400;
         font-size: 21px;
