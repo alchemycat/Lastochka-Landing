@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/head.html', {
-    "title": "Главная"
-})
-<body>
-     
-    <div class="wrapper">
-        <div class="overlay"></div>
-        @@include('html/header.html', {})
-        <main class="content">
-            @@include('html/intro.html', {})
-            @@include('html/work.html', {})
-            @@include('html/advantages.html', {})
-            @@include('html/targets.html', {})
-            @@include('html/interior.html', {})
-            @@include('html/video.html', {})
-            @@include('html/calc.html', {})
-            @@include('html/salary.html', {})
-            @@include('html/vacancies.html', {})
-            @@include('html/form.html', {})
-            @@include('html/questions.html', {})
-        </main>
-        @@include('html/footer.html', {})
-    </div>
-    
+	@@include('html/head.html', { "title": "Главная" })
+	<body>
+		<div class="wrapper">
+			<div class="overlay"></div>
+			@@include('html/header.html', {})
+			<main class="content">
+				@@include('html/intro.html', {}) @@include('html/work.html', {})
+				@@include('html/advantages.html', {}) @@include('html/targets.html', {})
+				@@include('html/interior.html', {}) @@include('html/video.html', {})
+				@@include('html/calc.html', {}) @@include('html/salary.html', {})
+				@@include('html/vacancies.html', {}) @@include('html/form.html', {})
+				@@include('html/questions.html', {})
+			</main>
+			@@include('html/footer.html', {})
+		</div>
 
-    <script src="js/external/bootstrap.min.js"></script>
-    <script src="js/app.min.js"></script>
-</body>
+		<script src="js/external/bootstrap.min.js"></script>
+
+		<script>
+			var tag = document.createElement("script");
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName("script")[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player;
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player("player", {
+					videoId: "jfKfPfyJRdk",
+					playerVars: {
+						playsinline: 1,
+                        controls: 0,
+                        rel: 0
+					},
+					events: {
+						onReady: onPlayerReady,
+						onStateChange: onPlayerStateChange,
+					},
+				});
+			}
+
+			// 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event) {
+				event.target.playVideo();
+			}
+
+			// 5. The API calls this function when the player's state changes.
+			//    The function indicates that when playing a video (state=1),
+			//    the player should play for six seconds and then stop.
+			var done = false;
+			function onPlayerStateChange(event) {
+                if (event.data == YT.PlayerState.PLAYING && !done) {
+                    hidePlayButton();
+                    done = true;
+                }
+                if (event.data == YT.PlayerState.PAUSED && done) {
+                    showPlayButton();
+                    done = false;
+                }
+			}
+			function stopVideo() {
+				player.stopVideo();
+			}
+
+            const playButton = document.querySelector(".video__button-play");
+
+            function hidePlayButton() {
+                playButton.classList.add("d-none");
+            }
+
+            function showPlayButton() {
+                playButton.classList.remove("d-none");
+            }
+
+            playButton.addEventListener("click", (e) => {
+                if (!playButton.classList.contains("d-none")) {
+                    player.playVideo();
+                } else {
+                    player.stopVideo();
+                    playButton.classList.remove("d-none");
+                }
+            });
+
+		</script>
+
+		<script src="js/app.min.js"></script>
+	</body>
 </html>
