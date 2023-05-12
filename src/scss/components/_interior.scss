@@ -19,7 +19,7 @@
     .swiper {
         position: relative;
         width: 100%;
-        height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
+        // height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
         overflow: hidden;
         border-radius: 20px;
     }
