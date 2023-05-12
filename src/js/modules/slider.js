@@ -1,5 +1,3 @@
-import Swiper from 'swiper';
-
 export default function slider() {
     const swiper = new Swiper('.swiper', {
         loop: true,

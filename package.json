@@ -14,8 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "del": "^7.0.0",
-    "gulp-cli": "^2.3.0",
-    "swiper": "^9.3.1"
+    "gulp-cli": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -43,6 +42,7 @@
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "merge-stream": "^2.0.0",
     "sass": "^1.58.3",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
