@@ -139,9 +139,16 @@
         &__caption.text__medium {
             font-size: 17px;
             line-height: 120%;
+            font-weight: 500;
         }
         &__answer {
             margin-top: 12px;
+            &.text__regular {
+                font-weight: 500;
+            }
+        }
+        &__description.text__regular {
+            font-weight: 500;
         }
         &__top {
             &:after {

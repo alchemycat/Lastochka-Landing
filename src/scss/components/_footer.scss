@@ -77,16 +77,30 @@
     .footer {
         padding: 28px 0px;
         padding-bottom: 146px;
+        overflow: hidden;
         .logo {
             max-width: 150px;
         }
 
         &__list {
             margin-top: 18px;
+            gap: 15px 0px;
+        }
+        &__address {
+            &.text__regular {
+                font-size: 14px;
+                font-weight: 500;
+            }
         }
         &__contacts {
             gap: 14px;
             margin-top: 49px;
+        }
+        &__item {
+            a {
+                font-weight: 500;
+                font-size: 14px;
+            }
         }
         &__button {
             background-color: transparent;
